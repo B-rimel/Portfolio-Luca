@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Barre de navigation*/
+nav *{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F5F5;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    position: fixed; top: 0;
+    width: 100%;
+    list-style: none;
+
+
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 400;
+
+    &.luca-title {
+        font-weight: 200;
+        padding: 10px;
+        border-bottom: 1px solid #161925;
+    }
+}
+
+button {
+    font-family: "Oswald";
+    font-size: 3em;
+    font-weight: 100;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: #CBF7ED;
+    color: #161925;
+    border: 2px solid #161925;
+    margin-bottom: 20px;
+}
+
+button:hover {
+        background-color: #2BDEB4;
+        transition: background-color ease-in-out 0.2s;
+    }
+
+
+/*Organisation des sections principales*/
+#main .main-section:nth-child(odd) {
+    background-color: #D7E0EA;
+    color: black;
+}
+
+#main .main-section:nth-child(even) {
+    background-color: #161925;
+    color: white;
+}
+
+.main-section {
+    padding: 5% 15%;
+}
+
+/*Partie projets*/
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10%/3);
+}
+
+.project-card {
+    width: 30%;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skills-container {
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.skill-pill-container {
+    width: 100%;    
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.skills-section {
+    width: calc(100%/3);
+    padding: 40px 10px;
+    border-radius: 5px;
+    height: 50vh;
+}
