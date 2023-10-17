@@ -5,6 +5,7 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
 
 a {
@@ -102,7 +103,7 @@ button:hover {
     color: black;
     background-color: white;
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -110,7 +111,7 @@ button:hover {
     width: 100%;    
     flex-wrap: wrap;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
 }
 
@@ -118,7 +119,7 @@ button:hover {
     display: flex;
     align-items: center;
     height: 30px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: 1px solid black;
     border-radius: 30px;
 }
@@ -127,5 +128,28 @@ button:hover {
     width: calc(100%/3);
     padding: 40px 10px;
     border-radius: 5px;
-    height: 50vh;
+}
+
+@media (max-width:1024px) {
+    *{
+        box-sizing: border-box;
+    }
+
+    .project-card {
+        width: 40%;
+        gap: 5%;
+    }
+    .skills-container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .skills-section{
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .spotify-playlist {
+        width: 100%;
+    }
 }
