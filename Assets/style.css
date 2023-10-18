@@ -140,6 +140,7 @@ button:hover {
     .projects-container {
         margin: auto;
         gap: 0;
+        justify-content: center;
     }
     .project-card {
         width: 40%;
