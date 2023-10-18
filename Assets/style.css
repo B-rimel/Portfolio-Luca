@@ -83,6 +83,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: calc(10%/3);
+    margin: auto;
 }
 
 .project-card {
@@ -108,7 +109,8 @@ button:hover {
 }
 
 .skill-pill-container {
-    width: 100%;    
+    margin: auto;
+    width: 80%;    
     flex-wrap: wrap;
     display: flex;
     gap: 15px;
@@ -135,6 +137,10 @@ button:hover {
         box-sizing: border-box;
     }
 
+    .projects-container {
+        margin: auto;
+        gap: 0;
+    }
     .project-card {
         width: 40%;
         gap: 5%;
@@ -151,5 +157,11 @@ button:hover {
 
     .spotify-playlist {
         width: 90%;
+    }
+}
+
+@media (max-width: 772px) {
+    .project-card {
+        width: 100%;
     }
 }
