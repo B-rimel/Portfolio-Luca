@@ -62,7 +62,7 @@ button {
 
 button:hover {
         background-color: #2BDEB4;
-        transition: background-color ease-in-out 0.2s;
+        transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
     }
 
 
@@ -129,6 +129,12 @@ button:hover {
     padding: 10px 15px;
     border: 1px solid black;
     border-radius: 30px;
+
+    &:hover{
+        color: white;
+        background-color: #161925;
+        transition: background-color ease-in-out 0.2s;
+    }
 }
 
 .skills-section {
