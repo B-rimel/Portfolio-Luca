@@ -16,7 +16,7 @@ if ((inputName, inputEmail, inputContent && isEmail)) {
   const email = new FormData();
   email.append("name", inputName.content);
   email.append("email", inputEmail.content);
-  email.append("content", inputContent);
+  email.append("content", inputContent.content);
   fetch(`lucacampagna.alwaysdata.net/mail`, {
     method: "POST",
     body: email,
