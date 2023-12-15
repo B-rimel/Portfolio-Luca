@@ -150,6 +150,14 @@ button:hover {
     flex-direction: column;
     margin-top: 10px; margin-bottom: 10px;
 }
+
+.form-input {
+    text-align: left;
+}
+
+input {
+    height: 30px;
+}
 @media (max-width:1024px) {
     *{
         box-sizing: border-box;
