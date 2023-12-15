@@ -19,7 +19,7 @@ formData.addEventListener("submit", async (event) => {
       content: inputContent.value,
     };
     console.log(email);
-    fetch(`localhost:3000`, {
+    fetch(`https://mail-a457.onrender.com/`, {
       method: "POST",
       body: email,
     }).then(formData.reset());
