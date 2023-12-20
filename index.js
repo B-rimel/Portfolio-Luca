@@ -27,3 +27,34 @@ formData.addEventListener("submit", async (event) => {
     alert("Une erreur s'est produite lors de l'envoi de votre email");
   }
 });
+
+//Attribution d'un dataset id unique à chaque projet
+const projectCards = document.querySelectorAll(".project-card");
+
+for (const projectCard of projectCards) {
+  let datasetId = 1;
+  const projectModal = projectCard.querySelector(".project-modal");
+  projectModal.dataset.projectid = datasetId;
+  datasetId++;
+  console.log(datasetId);
+}
+
+//Fermeture de la modale
+function toggleShow(element) {
+  element.classList.toggle("show");
+}
+
+const modal = document.querySelector(".project-modal");
+const work = element;
+
+// Au clic sur le close-button
+modal.querySelector(".project-modal-control").addEventListener("click", () => {
+  toggleShow(modal);
+});
+
+// Ou en dehors de l'élément
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".project-modal")) {
+    toggleShow(modal);
+  }
+});
