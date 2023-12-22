@@ -31,30 +31,16 @@ formData.addEventListener("submit", async (event) => {
 //Attribution d'un dataset id unique à chaque projet
 const projectCards = document.querySelectorAll(".project-card");
 
+let datasetId = 1;
+
 for (const projectCard of projectCards) {
-  let datasetId = 1;
   const projectModal = projectCard.querySelector(".project-modal");
-  projectModal.dataset.projectid = datasetId;
-  datasetId++;
-  console.log(datasetId);
+  projectCard.dataset.id = datasetId++;
 }
 
-//Fermeture de la modale
-function toggleShow(element) {
-  element.classList.toggle("show");
-}
+//Affichage de la modale de projet au clic du projet
 
-const modal = document.querySelector(".project-modal");
-const work = element;
-
-// Au clic sur le close-button
-modal.querySelector(".project-modal-control").addEventListener("click", () => {
-  toggleShow(modal);
-});
-
-// Ou en dehors de l'élément
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".project-modal")) {
-    toggleShow(modal);
-  }
+projectCards.addEventListener("click", () => {
+  const projectModalWrapper = projectCard.querySelector(".project-modal-wrapper");
+  projectModalWrapper.classList.toggle("show");
 });
