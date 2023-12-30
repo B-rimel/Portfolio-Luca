@@ -27,3 +27,20 @@ formData.addEventListener("submit", async (event) => {
     alert("Une erreur s'est produite lors de l'envoi de votre email");
   }
 });
+
+//Attribution d'un dataset id unique à chaque projet
+const projectCards = document.querySelectorAll(".project-card");
+
+let datasetId = 1;
+
+for (const projectCard of projectCards) {
+  const projectModal = projectCard.querySelector(".project-modal");
+  projectCard.dataset.id = datasetId++;
+}
+
+//Affichage de la modale de projet au clic du projet
+
+projectCards.addEventListener("click", () => {
+  const projectModalWrapper = projectCard.querySelector(".project-modal-wrapper");
+  projectModalWrapper.classList.toggle("show");
+});
