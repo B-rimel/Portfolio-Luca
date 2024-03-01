@@ -19,8 +19,12 @@ formData.addEventListener("submit", async (event) => {
       content: inputContent.value,
     };
     console.log(email);
-    fetch(`https://mail-a457.onrender.com/`, {
+    fetch(`https://mail-a457.onrender.com`, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json", // Indique que le corps de la requête est en format JSON
+        "Access-Control-Allow-Origin": "https://lucacampagna.dev" // Spécifie le domaine autorisé (s'il s'agit de votre propre domaine)
+      },
       body: email,
     }).then(formData.reset());
   } else {
